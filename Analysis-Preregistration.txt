@@ -1,0 +1,41 @@
+Analysis Preregistration
+
+1.Research question:
+Is there a statistically significant difference in the average Total Amount spent per transaction across the Beauty, Clothing, and Electronics product categories?
+
+2.Hypothesis:
+Null Hypothesis (H 0): The average transaction Total Amount is equal across the Beauty, Clothing, and Electronics categories.
+
+Alternative Hypothesis (H1): At least one product category has a significantly different average transaction Total Amount compared to the others.
+
+3.Population, sample, and exclusions:
+Target Population: General retail shoppers.
+
+Unit of Analysis: A single retail transaction (one row).
+
+Sample: The provided retail_sales_dataset.csv consisting of 1,000 historical retail transactions.
+
+Inclusion Rules: All transactions containing valid entries for both Product Category and Total Amount.
+
+Exclusion Rules: We will exclude any rows containing missing (null) values in the target columns, as well as any anomalous transactions where the Total Amount is 0 or negative.
+
+Stopping Rule: Since this is a pre-collected, static dataset, no stopping rule for data collection is required. We will analyze the full sample of valid records.
+
+Variables and measures
+Outcome: Total Amount (Continuous variable, measured in currency).
+
+Predictors: Product Category (Categorical variable containing 3 independent groups: Beauty, Clothing, Electronics).
+
+Missing-data handling: Listwise deletion for any rows missing the outcome or predictor variables.
+
+4.Analysis plan:
+Statistical Tests: We will conduct a One-Way Analysis of Variance (ANOVA) to compare the means of the three groups.
+
+Assumptions: We will check for normality using the Shapiro-Wilk test and homogeneity of variances using Levene's test. If assumptions are severely violated, we will fall back to the non-parametric Kruskal-Wallis H test.
+
+Alpha level: α=0.05.
+
+Post-hoc analysis: If the ANOVA is significant, a Tukey HSD test will be performed to identify which specific categories differ.
+
+5.Deviations:
+None at the time of preregistration.
